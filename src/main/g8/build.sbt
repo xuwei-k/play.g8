@@ -7,6 +7,7 @@ val baseSettings = Seq(
   scalacOptions := Seq("-language:_", "-deprecation", "-unchecked", "-Xlint"),
   watchSources ~= { _.filterNot(f => f.getName.endsWith(".swp") || f.getName.endsWith(".swo") || f.isDirectory) },
   javaOptions ++= originalJvmOptions,
+  incOptions := incOptions.value.withNameHashing(true),
   resolvers ++= Seq(Opts.resolver.sonatypeReleases)
 )
 
