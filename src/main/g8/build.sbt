@@ -1,5 +1,5 @@
 val originalJvmOptions = sys.process.javaVmArguments.filter(
-  a => Seq("-Xmx","-Xms", "-XX").exists(a.startsWith)
+  a => Seq("-Xmx", "-Xms", "-XX").exists(a.startsWith)
 )
 
 val baseSettings = Seq(
@@ -11,7 +11,12 @@ val baseSettings = Seq(
   resolvers ++= Seq(Opts.resolver.sonatypeReleases)
 )
 
-val main = play.Project("$name$", "$version$", Seq()).settings(
-  baseSettings : _*
+lazy val root = Project(
+  "$name$", file(".")
+).enablePlugins(PlayScala).settings(
+  baseSettings: _*
+).settings(
+  libraryDependencies ++= Seq(
+  )
 )
 
