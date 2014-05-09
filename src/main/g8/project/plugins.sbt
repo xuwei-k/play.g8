@@ -1,6 +1,4 @@
-logLevel := Level.Warn
-
-scalacOptions += "-deprecation"
+scalacOptions ++= Seq("-deprecation", "-language:_", "-unchecked")
 
 resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
 
