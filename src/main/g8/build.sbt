@@ -22,7 +22,8 @@ lazy val root = Project(
 ).enablePlugins(PlayScala).settings(
   baseSettings: _*
 ).settings(
-  libraryDependencies ++= Seq(
+  libraryDependencies ++= (
+    Nil
   )
 )
 
