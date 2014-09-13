@@ -1,0 +1,10 @@
+language: scala
+
+scala:
+  - 2.10.4
+  - 2.11.2
+
+script:
+  - rm -rf src/main/g8/test
+  - sbt ";set G8Keys.properties in G8Keys.g8 in Test ~= { _ + (\"scala_version\" -> \"$TRAVIS_SCALA_VERSION\")}; g8Test"
+
