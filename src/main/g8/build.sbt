@@ -4,7 +4,15 @@ val originalJvmOptions = sys.process.javaVmArguments.filter(
 
 val baseSettings = Seq(
   scalaVersion := "$scala_version$",
-  scalacOptions := Seq("-language:_", "-deprecation", "-unchecked", "-Xlint"),
+  scalacOptions ++= (
+    "-deprecation" ::
+    "-unchecked" ::
+    "-Xlint" ::
+    "-language:existentials" ::
+    "-language:higherKinds" ::
+    "-language:implicitConversions" ::
+    Nil
+  ),
   watchSources ~= { _.filterNot(f => f.getName.endsWith(".swp") || f.getName.endsWith(".swo") || f.isDirectory) },
   javaOptions ++= originalJvmOptions,
   shellPrompt := { state =>
