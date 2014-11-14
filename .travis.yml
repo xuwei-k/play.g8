@@ -1,0 +1,6 @@
+language: scala
+
+script:
+  - rm -rf src/main/g8/test
+  - sbt g8Test
+
