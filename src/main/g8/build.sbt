@@ -22,8 +22,6 @@ val baseSettings = Seq(
     }else ""
     Project.extract(state).currentRef.project + branch + " > "
   },
-  updateOptions ~= {_.withConsolidatedResolution(true)},
-  incOptions := incOptions.value.withNameHashing(true),
   resolvers ++= Seq(Opts.resolver.sonatypeReleases)
 )
 
