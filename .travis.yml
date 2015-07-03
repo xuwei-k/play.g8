@@ -7,7 +7,7 @@ jdk:
 
 scala:
   - 2.10.5
-  - 2.11.6
+  - 2.11.7
 
 script:
   - rm -rf src/main/g8/test
