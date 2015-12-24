@@ -22,6 +22,7 @@ val baseSettings = Seq(
     }else ""
     Project.extract(state).currentRef.project + branch + " > "
   },
+  fullResolvers ~= {_.filterNot(_.name == "jcenter")},
   resolvers ++= Seq(Opts.resolver.sonatypeReleases)
 )
 
