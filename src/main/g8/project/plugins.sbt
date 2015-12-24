@@ -8,5 +8,7 @@ scalacOptions ++= (
   "-Yno-adapted-args" ::
   Nil
 )
+
+fullResolvers ~= {_.filterNot(_.name == "jcenter")}
   
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "$play_version$")
