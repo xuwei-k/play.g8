@@ -31,6 +31,7 @@ lazy val root = Project(
 ).enablePlugins(PlayScala).settings(
   baseSettings: _*
 ).settings(
+  routesGenerator := StaticRoutesGenerator,
   libraryDependencies ++= (
     Nil
   )
