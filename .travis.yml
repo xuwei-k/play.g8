@@ -6,7 +6,7 @@ jdk:
   - oraclejdk8
 
 scala:
-  - 2.11.7
+  - 2.11.8
 
 script:
   - rm -rf src/main/g8/test
