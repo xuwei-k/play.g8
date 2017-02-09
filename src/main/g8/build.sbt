@@ -29,10 +29,10 @@ val baseSettings = Seq(
 lazy val root = Project(
   "$name$", file(".")
 ).enablePlugins(PlayScala).settings(
-  baseSettings: _*
-).settings(
-  routesGenerator := StaticRoutesGenerator,
+  baseSettings,
   libraryDependencies ++= (
+    ("org.webjars" %% "webjars-play" % "$webjars_play_version$") ::
+    ("org.webjars" % "jquery" % "$jquery_version$") ::
     Nil
   )
 )

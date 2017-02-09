@@ -1,7 +1,11 @@
-@(message: String)
+@(webJarAssets: controllers.WebJarAssets)
 
-@main("Welcome to Play") {
-
-    @play20.welcome(message)
-
-}
+<html>
+  <head>
+    <title>hello</title>
+    <script src='@routes.WebJarAssets.at(webJarAssets.locate("jquery.js"))'></script>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+  </body>
+</html>

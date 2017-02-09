@@ -1,12 +1,12 @@
 package controllers
 
-import play.api._
-import play.api.mvc._
+import javax.inject.Inject
+import play.api.mvc.{Action, Controller}
 
-object Application extends Controller {
+class Application @Inject() (webJarAssets: WebJarAssets) extends Controller {
 
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+  val index = Action{
+    Ok(views.html.index(webJarAssets))
   }
 
 }
