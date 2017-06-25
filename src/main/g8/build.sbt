@@ -29,8 +29,7 @@ val baseSettings = Seq(
 lazy val root = Project(
   "$name$", file(".")
 ).enablePlugins(PlayScala).settings(
-  baseSettings: _*
-).settings(
+  baseSettings,
   routesGenerator := StaticRoutesGenerator,
   libraryDependencies ++= (
     Nil
