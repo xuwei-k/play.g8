@@ -7,7 +7,6 @@ val baseSettings = Seq(
   scalacOptions ++= (
     "-deprecation" ::
     "-unchecked" ::
-    "-Xlint" ::
     "-language:existentials" ::
     "-language:higherKinds" ::
     "-language:implicitConversions" ::
@@ -30,7 +29,6 @@ lazy val root = Project(
   "$name$", file(".")
 ).enablePlugins(PlayScala).settings(
   baseSettings,
-  routesGenerator := StaticRoutesGenerator,
   libraryDependencies ++= (
     Nil
   )
