@@ -30,6 +30,7 @@ lazy val root = Project(
 ).enablePlugins(PlayScala).settings(
   baseSettings,
   libraryDependencies ++= (
+    guice ::
     Nil
   )
 )
