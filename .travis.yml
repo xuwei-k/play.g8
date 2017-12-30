@@ -10,5 +10,5 @@ scala:
   - 2.12.4
 
 script:
-  - sbt ";set g8Properties in g8 in Test ~= { _ + (\"scala_version\" -> \"$TRAVIS_SCALA_VERSION\")}; sbt test:g8 ; test:g8Test"
+  - sbt ";set g8Properties in g8 in Test ~= { _ + (\"scala_version\" -> \"$TRAVIS_SCALA_VERSION\")}; test:g8 ; test:g8Test"
 
